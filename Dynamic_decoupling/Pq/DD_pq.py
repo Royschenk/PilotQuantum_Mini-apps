@@ -29,6 +29,14 @@ from qiskit.circuit.library import XGate, YGate
 
 from pilot.pilot_compute_service import ExecutionEngine, PilotComputeService
 
+# Import helper functions from the separate file
+from full_circuit_helpers import (
+    run_full_circuit, 
+    reconstruct_expectation_values, 
+    compute_expectation_value_manually, 
+    measure_pauli_expectation
+)
+
 def create_dd_pass_managers(durations):
     """
     Create different Dynamical Decoupling pass managers
