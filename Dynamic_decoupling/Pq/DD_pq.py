@@ -24,7 +24,7 @@ from qiskit_addon_cutting.automated_cut_finding import (
 )
 
 # Import Dynamical Decoupling
-from src.DD.dynamical_decoupling import DynamicalDecoupling
+#from src.DD.dynamical_decoupling import DynamicalDecoupling
 from qiskit.circuit.library import XGate, YGate
 
 from pilot.pilot_compute_service import ExecutionEngine, PilotComputeService
@@ -168,7 +168,7 @@ def main():
         "resource": "slurm://localhost",
         "working_directory": os.path.join(os.environ["HOME"], "work"),
         "number_of_nodes": 1,
-        "cores_per_node": 8,
+        "cores_per_node": 4,
         "gpus_per_node": 2,
         "queue": "debug",
         "walltime": 30,
